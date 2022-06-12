@@ -1,0 +1,122 @@
+body {
+background-color: #262424;
+}
+
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav article"
+    "nav footer";
+  grid-template-rows: 80px 700px 1fr 5px;  
+  grid-template-columns: 18% 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 5;
+  }  
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: #FFFFFF ;
+  }
+#pageHeader {
+  color: #FFFFFF;
+  grid-area: header;
+  background-color: #262424;
+  front: white;
+  padding-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  }
+#pageFooter {
+  grid-area: footer;
+  background-color: #D3D3D3 ;
+  }
+#mainArticle { 
+  grid-area: article; 
+  background-color: #FFFFFF ;     
+
+  }
+#mainNav { 
+  grid-area: nav; 
+  background-color: #262424;
+  }
+
+
+@media (min-width: 360px) and (max-width: 1199.98px){
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+.menu {
+  grid-area: menu;
+  background-color: #262424;
+
+}
+.menu {
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+
+
+
+.menu a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  display: block;
+font-family: 'Montserrat', sans-serif;
+}
+
+.menu a:hover {
+  color: #696969;
+}
+.menu1 {
+  grid-area: menu;
+  background-color: #D3D3D3 ;
+
+}
+.menu1 {
+  overflow-x: hidden;
+  padding-top: 5px;
+}
+.menu1 a {
+  padding: 1px 1px 1px 1px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #000000;
+  display: block;
+font-family: 'Montserrat', sans-serif;
+}
+.menu1 a:hover {
+  color: #696969;
+}
+.thumb img  {
+    padding: 15px; 
+    background: #666; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+   }
+   
+.text1 {
+  padding:1px;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+.inf {
+  padding:55px;
+  font-size: 30px;
+  color: #000000;
+font-family: 'Montserrat', sans-serif;
+}
+.pht {
+border-radius: 5px;
+}
