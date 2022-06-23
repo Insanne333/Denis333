@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>massiv</title>
+</head>
+<body>
+<script>
+var m = []
+for(i=0;i<49;i++){
+m.unshift(Math.floor(Math.random()*100)+1)
+}
+m.sort((a,b)=>a-b)
+document.write(m);
+
+function chet(m) {
+return m.reduce((a, b) => (a + b)) / m.length;
+console.log(chet(m))
+}
+</script>
+<span id=qwe></span>
+</body>
+</html>
