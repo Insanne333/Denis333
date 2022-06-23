@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <img  id="change" name="change" src="пушка.png" onClick="swapImage();" width="500px" />
+    <select name="list1" id="agriculture" onchange="">
+        <option>1920</option>
+        <option>1280</option>
+        <option>800</option>
+        
+   </select>
+<body>
+    <label>
+        <ul>
+            <input type="radio" name="group_1" value="reflection" onclick="bb()"> Отзеркалить
+            <input type="radio" name="group_1" value="reflection" onclick="bbb()"> Сбросить отражение
+        </ul>
+    </label>
+    <label>
+        <ul>
+            <input type="radio" name="group_1" value="increase" onclick="bb3()"> Увеличение
+            <input type="radio" name="group_1" value="increase" onclick="bb4()"> Сбросить увеличение
+        </ul>
+    </label>
+    <label>
+        <ul>
+            <input type="radio" name="group_1" value="transparency" onclick="bb5()"> Прозрачность
+            <input type="radio" name="group_1" value="transparency" onclick="bb6()"> Сбросить прозрачность
+        </ul>
+    </label>
+    <label>
+        <ul>
+            <input type="radio" name="group_1" value="rotate" onclick="rotate1()"> 90
+            <input type="radio" name="group_1" value="rotate" onclick="rotate2()"> 180
+            <input type="radio" name="group_1" value="rotate" onclick="rotate3()"> 360
+            <input type="radio" name="group_1" value="rotate" onclick="rotate4()"> Сбросить всё
+        </ul>
+    </label>
+    <script>
+        function reflection() {
+            img_1 = document.getElementById("change")
+        }
+    </script>
+    <script type="text/javascript">
+        intImage = 2;
+        function swapImage() {
+            switch (intImage) {
+                case 1:
+                    change.src = "img1.jpg";
+                    intImage = 2;
+                    return(false);
+                case 2:
+                    change.src = "img2.jpg";
+                    intImage = 3;
+                    return(false);
+                case 3:
+                    change.src = "img3.jpg";
+                    intImage = 1;
+                    return(false);
+            }
+        }
+    </script>
+    <script>
+        var select = document.getElementById('agriculture');
+        select.addEventListener('change', function(){
+              var getValue = this.value;
+              console.log( getValue );
+
+              if (getValue == "800"){
+                  document.getElementById("change").width = "500"
+              }else if (getValue == "1280"){
+                  document.getElementById("change").width = "600"
+              }else{
+                  document.getElementById("change").width = "700"
+              }
+
+            });
+    </script>
+    
+    <script>
+        function rotate1(){
+            document.getElementById("change").style.transform = "rotate(90deg)";
+
+        }
+        function rotate2(){
+            document.getElementById("change").style.transform = "rotate(180deg)";
+
+        }
+        function rotate3(){
+            document.getElementById("change").style.transform = "rotate(360deg)";
+
+        }
+        function rotate4(){
+            document.getElementById("change").style.transform = "rotate(0deg)";
+
+        }
+        function bb(){
+            document.getElementById("change").style.transform = "scale(-1, 1)";
+        }
+
+        function bbb(){
+            document.getElementById("change").style.transform = "scale(1, 1)";  
+        } 
+        
+    </script>
+    <script>
+        function bb3(){
+            
+            document.getElementById("change").style.width = "650px";
+        
+        }
+        function bb4(){
+            document.getElementById("change").style.width = "500px";
+        }
+        function bb5(){
+            
+            document.getElementById("change").style.opacity = "50%";
+        }
+        function bb6(){
+            document.getElementById("change").style.opacity = "100%";
+        }
+        $('.block').on('click', function(event) {
+            if(event.target !== event.currentTarget) {
+            return;
+        }
+            console.log(event);
+            alert('block');
+        });
+    </script>
+    
+</body>
+</html>
